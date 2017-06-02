@@ -48,5 +48,28 @@ Use RVM,the [Ruby Version Manager](https://rvm.io/),to install Ruby and manage y
   ```
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   ```
-  
+  **Note:hkp://keys.gnupg.net can sometimes timeout you may want to use differet keyserver - hkp://pgp.mit.edu
+  Install RVM stable with Ruby:
+  ```
+  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  ```
+  Note the backslash before "curl"(this avoids potential version confilicts).The "--ruby" flag will install the newest version of Ruby.
+### If you already Have RVM installed Update it to the latest version and install Ruby:
+```
+$ rvm get stable --autolibs=enable
+$ rvm install ruby
+$ rvm --default use ruby-2.4
+```
+### Install Node.js
+Since Rails 3., a JavaScript runtime has been needed for development on Ubuntu Linux.The JavaScript runtime is required to compile code for the Rails asset pipeline.For development on Ubuntu Linux it is best to install the Node.js server-side JavaScript environment.
+```
+$ sudo apt-get install nodejs
+```
+and set it in your **$PATH**
+### Check the Gem Manager
+[RubyGems] is the gem manager in Ruby,Check the installed gem manager version.you may see:
+```
+$ gem -V
+```
+
   
