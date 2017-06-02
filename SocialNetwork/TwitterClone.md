@@ -42,4 +42,11 @@ We will build this with Ruby on Rails 5,Utilizing  Twitter's own Bootstrap CSS f
   $ sudo apt-get install curl
   ```
   You'll use Curl for installing RVM.http://railsapps.github.io/installrubyonrails-ubuntu.html
+### Install Ruby Using RVM
+Use RVM,the [Ruby Version Manager](https://rvm.io/),to install Ruby and manage your Rails versions.The RVM website explains [how to install RVM](https://rvm.io/rvm/install/).Here's the simplest way:
+  Before any other step install mapapis public key (might need gpg2)
+  ```
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  ```
+  
   
