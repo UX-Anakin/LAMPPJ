@@ -13,4 +13,8 @@
     ```
     ./pycharm.sh
     ```
-    After you run the pycharm.sh file.First you will prompt to "import settings" and Privacy Policy 
+    After you run the pycharm.sh file.First you will prompt to "import settings" and Privacy Policy Agreement Windows for the Ubuntu Pycharm community edition.
+    After that you will get the "initial Configuration" Window.From the Initial Configuration check the check boxes "Create Desktop Entry" and "For all User".
+
+And we are done. Now you have successfully installed Pycharm Python IDE on Ubuntu 16.04
+    
