@@ -71,5 +71,19 @@ and set it in your **$PATH**
 ```
 $ gem -V
 ```
+At the time this was written, a newer RubyGems version was available.Use **gem update --system** to upgrade the Ruby gem manager:
+```
+$ gem update --system
+```
+Display a list of gemsets:
+```
+$ rvm gemset list
+```
+RVM's Global Gemset
+```
+$ rvm gemset use global
+$ gem list
+$ gem outdated # list 
+```
 
   
