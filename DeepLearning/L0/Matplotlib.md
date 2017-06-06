@@ -74,3 +74,36 @@ plt.legend()
 plt.show()
 ```
 The plt.scatter allows us to not only plot on x and y, but it also lets us decide on the color,size,and type of marker we use.There are a bunch of marker options,see the [Matplotlib Marker Documentation](http://matplotlib.org/api/markers_api.html)for all of your choices.
+
+### Stack Plots with Matplotlib
+stack plots, the idea of stack plots is to show "parts to the whole" over time. A stack plot is basically like a pie-chart, only over time.
+```
+'''
+Let's consider a situation where we have 24 hours in a day,and we'd like to see how we're spending our time.We'll divide our activities into:Sleeping,eating,working,and playing.
+We're going to assume that we're trakcing this over the course of 5 days,so our starting data will look like:
+'''
+import matplotlib.pyplot as plt
+
+days = [1,2,3,4,5]
+
+sleeping = [7,8,6,11,7]
+eating =   [2,3,4,3,2]
+working =  [7,8,7,2,2]
+playing =  [8,5,7,8,13]
+
+plt.plot([],[],color='m', label='Sleeping', linewidth=5)
+plt.plot([],[],color='c', label='Eating', linewidth=5)
+plt.plot([],[],color='r', label='Working', linewidth=5)
+plt.plot([],[],color='k', label='Playing', linewidth=5)
+
+'''
+"x" axis will consist of the days variable,Then,our consituents for the days are held in their respective activities
+'''
+plt.stackplot(days, sleeping, eating, working, playing, colors=['m','c','r','k'])
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Interesting Graph\nCheck it out')
+plt.show()
+```
+
