@@ -130,3 +130,41 @@ plt.show()
 Within the plt.pie, we specify the "slices",which are the relevant sizes for each part.Then,we specify the color list for the corresponding slices.Next, we can optionally specify the "Start angle" for the graph.Next, we can optionally add a shadow to the plot for a bit of character, and then we can even use "explode" to pull out a slice a bit.
 Finally, we do autopct to optionaly overlay the percentages on the graph itself.
 
+### Loading Data from Files for Matplotlib
+Extract data from a file to graph it.First, we'll use the built-in csv module to load CSV files,then we'll show how to utilize Numpy,which is a third-part module,to load files.
+```
+import matplotlib.pyplot as plt
+import csv
+
+x = []
+y = []
+
+with open('example.txt','r') as csvfile:
+        plots = csv.reader(csvfile, delimiter=',')
+        for row in plots:
+                x.append(int(row[0]))
+                y.append(int(row[1]))
+                
+plt.plot(x,y, label='Loaded from file!')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Interesting Graph\nCheck it out')
+plt.legend()
+plt.show()
+```
+Use the csv module to read in the data.The csv reader automatically splits the file by line,and then the data in the file by the delimiter we choose.In our case, this is a comma.Note:the "csv" module and the csv reader does not require the file to be iterally a .csv file.It can be any text file that simply has delimited data.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x, y = np.loadtxt('example.txt', delimiter=',', unpack=True)
+plt.plot(x,y, label='Loaded from file!')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Interesting Graph\nCheck it out')
+plt.legend()
+plt.show()
+```
+The result should be the same graph.Later on,we can utilize Numpy to do some more work for us when we load the data in, but that is content for a future tutorial! just like with the csv module not needing a .csv specifically, the loadtst function does not require the file to be a .txt file,it could be a .csv,and it can even be a python list object!
