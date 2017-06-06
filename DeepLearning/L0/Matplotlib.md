@@ -60,3 +60,17 @@ plt.show()
 ```
 For plt.hist, you first put in all of the values,then you specify into what "bins" or containers you will place the data into.In our case,we are plotting a bunch of ages,and we want to display them in terms of increments of 10 years.we give the bars a width of 0.8, but you can choose something else if you want to make the bars thicker, or thinner.
 
+### Scatter Plots with Matplotlib
+Cover scatter plots! The idea of scatter plots is usually to compare two variables, or three if you are plotting in 3 diemnsions, looking for correlation or groups.
+```
+import matplotlib.pyplot as plt
+x = [1,2,3,4,5,6,7,8]
+y = [5,2,4,2,1,4,5,2]
+plt.scatter(x,y, label='skitscat', color='k', s=25, marker="o")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Interesting Graph\nCheck it out')
+plt.legend()
+plt.show()
+```
+The plt.scatter allows us to not only plot on x and y, but it also lets us decide on the color,size,and type of marker we use.There are a bunch of marker options,see the [Matplotlib Marker Documentation](http://matplotlib.org/api/markers_api.html)for all of your choices.
