@@ -107,3 +107,23 @@ plt.title('Interesting Graph\nCheck it out')
 plt.show()
 ```
 
+### Pie Charts with Matplotlib
+Pie charts are a lot like the stack plots, only they are for a certain point in time.Typically, a Pie Chart is sued to show parts to the whole, and often a % share.Luckily for us, Matplotlib handles the sizes of the slices and eveything, we just feed it the numbers.
+```
+import matplotlib.pyplot as plt
+
+slices = [7,2,2,13]
+activities = ['sleeping','eating','working','playing']
+cols = ['c','m','r','b']
+
+plt.pie(slices,
+        labels=activities,
+        colors=cols,
+        startangle=90,
+        shadow= True,
+        explode=(0,0.1,0,0),
+        autopct='%1.1f%%')
+
+plt.title('Interesting Graph\nCheck it out')
+plt.show()
+```
