@@ -35,3 +35,28 @@ plt.title('Interesting Graph\nCheck it out')
 plt.legend()
 plt.show()
 ```
+### Bar Charts and Histograms with Matplotlib
+```
+import matplotlib.pyplot as plt
+plt.bar([1,3,5,7,9],[5,2,7,8,2], label="Example One", color='b') # creates the bar chart for us.
+plt.bar([2,4,6,8,10],[8,6,2,5,6], label="Example two", color='g')
+plt.legend()
+plt.xlabel('bar number')
+plt.ylabel('bar height')
+plt.title('Epic Graph\nAnother Line! Whoa')
+plt.show()
+```
+The plt.bar creates the bar chart for us.
+```
+import matplotlib.pyplot as plt
+population_ages = [22,55,62,45,21,22,34,42,42,4,99,102,110,120,121,122,130,111,115,112,80,75,65,54,44,43,42,48]
+bins = [0,10,20,30,40,50,60,70,80,90,100,110,120,130]
+plt.hist(population_ages, bins, histtype='bar', rwidth=0.8)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Interesting Graph\nCheck it out')
+plt.legend()
+plt.show()
+```
+For plt.hist, you first put in all of the values,then you specify into what "bins" or containers you will place the data into.In our case,we are plotting a bunch of ages,and we want to display them in terms of increments of 10 years.we give the bars a width of 0.8, but you can choose something else if you want to make the bars thicker, or thinner.
+
