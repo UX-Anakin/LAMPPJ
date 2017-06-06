@@ -127,3 +127,6 @@ plt.pie(slices,
 plt.title('Interesting Graph\nCheck it out')
 plt.show()
 ```
+Within the plt.pie, we specify the "slices",which are the relevant sizes for each part.Then,we specify the color list for the corresponding slices.Next, we can optionally specify the "Start angle" for the graph.Next, we can optionally add a shadow to the plot for a bit of character, and then we can even use "explode" to pull out a slice a bit.
+Finally, we do autopct to optionaly overlay the percentages on the graph itself.
+
