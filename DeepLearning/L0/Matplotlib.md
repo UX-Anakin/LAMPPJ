@@ -168,3 +168,26 @@ plt.legend()
 plt.show()
 ```
 The result should be the same graph.Later on,we can utilize Numpy to do some more work for us when we load the data in, but that is content for a future tutorial! just like with the csv module not needing a .csv specifically, the loadtst function does not require the file to be a .txt file,it could be a .csv,and it can even be a python list object!
+
+
+### Data From the Internet for Matplotlib
+Aside from loading data from the files, another popular source for data is the internet.We can load data from the intent from a variety of ways, but for us, we're going to just simply read the source code of the website,then use simple spliting to separate the data.
+```
+import matplotlib.pyplot as plt
+import numpy as np
+import urllib # for accessing the internet
+import matplotlib.dates as mdates # whic is useful for converting date stamps to dates that matplotlib can understand.
+
+def graph_data(stock):
+    stock_price_url = 'http://chartapi.finance.yahoo.com/instrument/1.0/'+stock+'/chartdata;type=quote;range=10y/csv'
+    source_code = urllib.request.urlopen(stock_price_url).read().decode()
+    stock_data = [] # define an empty list,which will be placing the stock data 
+    split_source = source_code.split('\n') # splitting new line
+
+    for line in split_source:
+        split_line = line.split(',')
+        if len(split_line) == 6:
+            if 'values' not in line:
+                stock_data.append(line)
+
+```
