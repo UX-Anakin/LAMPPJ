@@ -191,3 +191,7 @@ def graph_data(stock):
                 stock_data.append(line)
 
 ```
+
+### Converting date stamps for Matplotlib
+
+### 
