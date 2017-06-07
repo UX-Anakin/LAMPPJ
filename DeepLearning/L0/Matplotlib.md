@@ -194,4 +194,29 @@ def graph_data(stock):
 
 ### Converting date stamps for Matplotlib
 
-### 
+### Intro and Getting Stock Price Data - Python Programming for Finance
+Run through the basics of importing financial(stock) data into Python using Pandas framwork.
+Required Modules to start:
+        1. Numpy
+        2. Matplotlib
+        3. Pandas
+        4. Pandas-datareader
+        5. BeautifulSoup4
+        6. scikit-learn / sklearn
+```
+import datetime as dt # work with dates
+import matplotlib.pyplot as plt # graph things
+from matplotlib import style 
+import pandas as pd # manipulate data 
+improt pandas_datareader.data as web
+
+style.use('ggplot') # setting a graph style
+
+start = dt.datetime(2000, 1, 1) // this will be the range of dates that we're going to grab stock pricing information for
+end = dt.datetime(2016, 12, 31)
+
+df = web.DataReader('TSLA', "google", start, end) # uses the pandas_datareader package,looks for the stock ticker TSLA(Tesla),gets the information from google,for the starting date of whatever start is and ends at the end variable that we chose. Most tickers are 1-4 letters.
+
+print(df.head()) # got Pandas.DataFrame object contains stock pricing information for Tesla.
+
+```
