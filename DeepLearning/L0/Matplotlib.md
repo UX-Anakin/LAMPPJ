@@ -218,5 +218,21 @@ end = dt.datetime(2016, 12, 31)
 df = web.DataReader('TSLA', "google", start, end) # uses the pandas_datareader package,looks for the stock ticker TSLA(Tesla),gets the information from google,for the starting date of whatever start is and ends at the end variable that we chose. Most tickers are 1-4 letters.
 
 print(df.head()) # got Pandas.DataFrame object contains stock pricing information for Tesla.
+# .head() if you don't pass a parameter, 5 is the default value.We mostly will use .head() to just get a quick glimpse of our data to make sure we're on the right track.
 
+'''
+             Open   High    Low  Close  Volume
+Date                                          
+2002-12-23  14.46  14.46  14.46  14.46    9600
+2003-04-24  14.46  14.46  14.46  14.46    1000
+2004-01-14  24.15  24.15  24.15  24.15     500
+2004-01-15  23.36  23.36  23.36  23.36     100
+2005-04-01  40.95  40.95  40.95  40.95  251600
+'''
+Open - When the stock market opens in the morning for trading
+High - What was the highest value for that day
+Low - what was the lowest value for that day
+Close - what was the final price
+Volumn - how many shares were traded
+Adj Close - is helpful, since it accounts for future stock splits, and gives the relative price to splits. For this reason, the adjusted prices are the prices you're most likely to be dealing with.
 ```
