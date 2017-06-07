@@ -242,3 +242,19 @@ df = pd.read_csv('TSLA.csv', parse_dates=True, index_col=0)
 df[['Open','Close']].plot()
 plt.show()
 ```
+
+### Basic stock data Manipulation - Python Programming for Finance
+Manipulation and visulization with our stock data
+```
+import datetime as dt # so we can set some starting and end date for the data
+import matplotlib.pyplot as plt
+from matplotlib import style # make our graphs look a little better
+import pandas as pd # pandas is a really really popular data analusis library 
+import pandas_datareader.data as web # grab data from the finance API 
+
+style.use('ggplot')
+
+df = pd.read_csv('TSLA.csv', parse_dates=True, index_col=0)
+df[['Open','Close']].plot()
+plt.show()
+```
