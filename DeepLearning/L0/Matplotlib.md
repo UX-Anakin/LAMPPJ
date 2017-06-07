@@ -235,4 +235,10 @@ Low - what was the lowest value for that day
 Close - what was the final price
 Volumn - how many shares were traded
 Adj Close - is helpful, since it accounts for future stock splits, and gives the relative price to splits. For this reason, the adjusted prices are the prices you're most likely to be dealing with.
+'''
+#df = web.DataReader('TSLA', 'google', start, end)
+#df.to_csv('TSLA.csv')
+df = pd.read_csv('TSLA.csv', parse_dates=True, index_col=0)
+df[['Open','Close']].plot()
+plt.show()
 ```
