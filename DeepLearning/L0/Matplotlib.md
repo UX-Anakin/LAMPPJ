@@ -255,6 +255,15 @@ import pandas_datareader.data as web # grab data from the finance API
 style.use('ggplot')
 
 df = pd.read_csv('TSLA.csv', parse_dates=True, index_col=0)
-df[['Open','Close']].plot()
+
+df['100ma'] = df['Open'].rolling(window=100).mean() # rolling method applied to it,with a windpw of 100,and this window is going to be mean()(average)operation.
+# NaN means "Not a Number"
+ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1)
+ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1)
+
+ax1.plot(df.index, df['Open'])
+ax1.plot(df.index, df['100ma'])
+ax2.bar(df.index, df['Volume'])
+
 plt.show()
 ```
