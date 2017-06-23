@@ -164,7 +164,15 @@ bind-address = 127.0.0.1
 **SHOW TABLE STATUS LIKE tablename\G** -- Reports details of the MySQL DBMS performance and statistics.<br>
 
 
-
+## Uninstall all those broken versions of MySQL and re-install it with Brew on Mac Mavericks
+```
+$ ps -ax | grep mysql 
+    # -a option : list the processes of all users on the system rather than just those of the current user
+    # -u option : provides detailed information about each process
+    # ps is most often used to obtain the PID of a malfunctioning process in order to terminate it will the kill command.
+$ kill [PID] # terminate the processes
+$ kill -9 [PID] # forceful -9 option 
+```
 
 
 
